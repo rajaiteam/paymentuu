@@ -32,7 +32,7 @@ app.post("/pay", async(req,res)=>{
               "ORD_" + Date.now(),
 
             callback_url:
-              "https://paymentuu.onrender.com"
+              "https://paymentuu.onrender.com/callback"
          }
       );
 
