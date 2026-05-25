@@ -36,7 +36,16 @@ app.post("/pay", async(req,res)=>{
          }
       );
 
-      res.json(response.data);
+      const gatewayData = response.data;
+
+const payment_url =
+   gatewayData.payment_url ||
+   gatewayData.payUrl ||
+   gatewayData.url;
+
+res.json({
+   payment_url
+});
 
    }catch(err){
 
